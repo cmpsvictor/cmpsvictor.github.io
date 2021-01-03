@@ -1,0 +1,21 @@
+html{
+    color:gray;
+    text-align:center;
+    font-family:'Courier Prime';
+}
+
+h1{
+    font-size:4em;
+    font-family:'Courier Prime';
+
+a{
+    color:orange;
+    text-decoration:none;
+}
+
+a:hover{
+    color:azure;
+}
+
+
+
