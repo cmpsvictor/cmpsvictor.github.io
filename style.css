@@ -7,6 +7,18 @@ html{
 h1{
     font-size:4em;
     font-family:'Courier Prime';
+}
+
+h3{
+    font-size:3em;
+    font-family:'Courier Prime';
+    color:green;
+}
+
+p{
+    font-size:1em;
+    font-family:'Courier Prime';
+}
 
 a{
     color:orange;
