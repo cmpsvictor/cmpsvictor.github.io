@@ -6,7 +6,6 @@ nick = document.getElementById("nick");
 
 nick.innerHTML = textoTemp;
 
-
 function main()
 {
     let i;
@@ -63,18 +62,6 @@ function escreveCaractere(i)
     nick.innerHTML = textoTemp;
 }
 
-function escreveTitulo(i)
-{
-
-    console.log(i);
-    var caractere = texto[i];
-    textoTemp = textoTemp.substring(0, i) + caractere + textoTemp.substring(i+1);
-    nick.innerHTML = textoTemp;
-    i += 1;
-    console.log(i);
-}
-
-
 function iteraTexto()
 {
     var pronto = false;
@@ -88,8 +75,7 @@ function iteraTexto()
     //clearInterval(timer);
 }
 
-
-function sleep(ms)  // Sleep improvisado até eu aprender a usar setTimeout com funções não-void
+function sleep(ms)  // Sleep improvisado 
 { 
   let data = Date.now();
   let dataAtual = null;

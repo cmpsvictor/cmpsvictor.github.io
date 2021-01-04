@@ -9,8 +9,13 @@ h1{
     font-family:'Courier Prime';
 }
 
+h2{
+    color: green;
+    font-size: 2em;
+    font-family: 'Courier Prime';
+}
 h3{
-    font-size:3em;
+    font-size:2em;
     font-family:'Courier Prime';
     color:green;
 }
@@ -29,5 +34,19 @@ a:hover{
     color:azure;
 }
 
+div{
+    font-size:3em;
+    color:green;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
 
 
