@@ -10,18 +10,20 @@ h1{
 }
 
 h2{
+    text-align: center;
     color: green;
-    font-size: 2em;
+    font-size: 3em;
     font-family: 'Courier Prime';
 }
 h3{
-    font-size:2em;
+    text-align: center;
+    font-size:3em;
     font-family:'Courier Prime';
     color:green;
 }
 
 p{
-    font-size:1em;
+    font-size:1.5em;
     font-family:'Courier Prime';
 }
 
@@ -34,10 +36,22 @@ a:hover{
     color:azure;
 }
 
-div{
-    font-size:3em;
-    color:green;
+.container {
+    width: 300px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: auto;
 }
+.terminal {
+    float: left;
+    border: 1px solid black;
+}
+
+.nick_text {
+    border: 1px solid black;
+    overflow:hidden;
+}
+
 
 .blink {
     animation: blinker 1s linear infinite;
