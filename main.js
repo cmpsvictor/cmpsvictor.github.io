@@ -1,24 +1,28 @@
 var textoTemp = '######';
-var texto = '0xj3st';
-var timerId = 0;
+var texto1 = '0xj3st';
+var texto2 = 'Victor';
+
+var indiceTexto = 0;
 
 nick = document.getElementById("nick");
 
 nick.innerHTML = textoTemp;
 
-function main()
+function ativaTexto()
 {
+    let iteracao = 0;
+    let texto = defineTexto();
     let i;
-    var iteracao = 0; 
-    for ( i = 0; i < texto.length; i++ )
+    var timer2 = setInterval( escreveCaracteres, 100 )
+    function escreveCaracteres()
     {
-        timerId = setInterval( escreveCaractere, 300, i );
-        function escreveCaractere(i)
+        for ( i = 0; i < texto.length; i++ )
         {
-            if ( iteracao == 90 )
+            if ( iteracao == 65 )
             {
-                clearInterval( timerId );
+                clearInterval(timer2);
                 nick.innerHTML = texto;
+                return;
             }
             else
             {
@@ -31,9 +35,35 @@ function main()
         }
     }
 }
-    
-setTimeout( main, 1500 );
 
+setTimeout( ativaTexto, 1000 );
+setInterval( ativaTexto, 7000 );
+
+function defineTexto()
+{
+    if ( indiceTexto == 3 )
+    {
+        indiceTexto = 0;
+    }
+    let texto;
+    switch ( indiceTexto )
+    {
+        case 0:
+            texto = 'Victor';
+            break;
+        case 1:
+            texto = 'Campos';
+            break;
+        case 2:
+            texto = '0xj3st';
+            break;
+        default:
+            texto = 'Victor';
+            break;
+    }
+    indiceTexto++;
+    return texto;
+}
 
 function geraCaractereAleatorio()
 {
@@ -48,40 +78,4 @@ function geraCaractereAleatorio()
     random = String.fromCharCode(random);
     return random;
 }
-
-
-// Funções wip para dar o outro efeito la
-
-/*
-function escreveCaractere(i)
-{
-    // Substitui caractere na string copiando o antes e depois
-    // E concatenando tudo com o novo caractere
-    let char1 = geraCaractereAleatorio();
-    textoTemp = textoTemp.substring(0, i) + char1 + textoTemp.substring(i+1); // se não especifica segundo valor em substring vai até o final
-    nick.innerHTML = textoTemp;
-}
-
-function iteraTexto()
-{
-    var pronto = false;
-    //clearTimeout(start);
-    let i;
-    for ( i = 0; i < texto.length; i++ )
-    {
-        //var timer = setInterval(escreveCaractere, 1500, i);
-        nick.innerHTML = textoTemp;
-    }
-    //clearInterval(timer);
-}
-
-function sleep(ms)  // Sleep improvisado 
-{ 
-  let data = Date.now();
-  let dataAtual = null;
-  do {
-    dataAtual = Date.now();
-  } while (dataAtual - data < ms);
-}
-*/
 

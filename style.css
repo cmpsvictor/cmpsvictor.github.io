@@ -37,7 +37,7 @@ a:hover{
 }
 
 .container {
-    width: 300px;
+    width: 275px;
     border: 1px solid black;
     overflow: hidden;
     margin: auto;
@@ -54,7 +54,7 @@ a:hover{
 
 
 .blink {
-    animation: blinker 1s linear infinite;
+    animation: blinker 1.5s linear infinite;
 }
 
 @keyframes blinker {
