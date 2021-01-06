@@ -1,6 +1,4 @@
 var textoTemp = '######';
-var texto1 = '0xj3st';
-var texto2 = 'Victor';
 
 var indiceTexto = 0;
 
@@ -20,7 +18,7 @@ function ativaTexto()
         {
             if ( iteracao == 65 )
             {
-                clearInterval(timer2);
+                clearInterval( timer2 );
                 nick.innerHTML = texto;
                 return;
             }
@@ -36,8 +34,8 @@ function ativaTexto()
     }
 }
 
-setTimeout( ativaTexto, 1000 );
-setInterval( ativaTexto, 7000 );
+setTimeout( ativaTexto, 1000 ); // Timeout pro carregamento inicial da página
+setInterval( ativaTexto, 7000 ); // Ativa o intervalo pra 6s após o timeout inicial
 
 function defineTexto()
 {
