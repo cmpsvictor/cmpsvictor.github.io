@@ -68,11 +68,7 @@ function geraCaractereAleatorio()
     
     // Range dos decimais para os caracteres ASCII desejados -> 33 a 125
     
-    let random = Math.floor(Math.random() * 100) + 33; // Gera int de 0 a 99, soma com 33
-    if ( random > 125 ) // Tratativa de 126 a 132
-    {
-        random -= 7;
-    }
+    let random = Math.floor(Math.random() * 93) + 33; // Gera int de 0 a 99, soma com 33
     random = String.fromCharCode(random);
     return random;
 }
