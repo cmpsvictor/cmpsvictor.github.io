@@ -1,4 +1,4 @@
-var textoTemp = '######';
+var textoTemp = '######'; // Texto a ser alterado
 
 var indiceTexto = 0;
 
@@ -47,16 +47,16 @@ function defineTexto()
     switch ( indiceTexto )
     {
         case 0:
-            texto = 'Victor';
+            texto = 'victor';
             break;
         case 1:
-            texto = 'Campos';
+            texto = 'campos';
             break;
         case 2:
             texto = '0xj3st';
             break;
         default:
-            texto = 'Victor';
+            texto = 'victor';
             break;
     }
     indiceTexto++;
@@ -65,10 +65,12 @@ function defineTexto()
 
 function geraCaractereAleatorio()
 {
-    
+     
     // Range dos decimais para os caracteres ASCII desejados -> 33 a 125
+    min = 33;
+    max = 126;
     
-    let random = Math.floor(Math.random() * 93) + 33; // Gera int de 0 a 99, soma com 33
+    let random = Math.floor(Math.random() * (max - min + 1)) + min;
     random = String.fromCharCode(random);
     return random;
 }
